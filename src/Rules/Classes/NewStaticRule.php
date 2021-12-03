@@ -57,6 +57,10 @@ class NewStaticRule implements Rule
 				return [];
 			}
 
+			if ($constructor->isPrivate()) {
+				return [];
+			}
+
 			$prototype = $constructor->getPrototype();
 			if ($prototype->isAbstract()) {
 				return [];

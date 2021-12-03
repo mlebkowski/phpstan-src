@@ -67,6 +67,21 @@ class FinalConstructorInNonFinalClass
 
 }
 
+abstract class PrivateConstructorInAbstractClass
+{
+
+	private function __construct()
+	{
+
+	}
+
+	public static function factoryMethod()
+	{
+		return new static();
+	}
+
+}
+
 interface InterfaceWithConstructor
 {
 
